@@ -1,0 +1,43 @@
+﻿<MudThemeProvider Theme="JazzJuneTheme" />
+
+@code{
+    MudTheme JazzJuneTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Teal.Darken4,
+            Secondary = Colors.Indigo.Default,
+            AppbarBackground = Colors.Teal.Darken4,
+            AppbarText = Colors.Shades.White
+        },
+        PaletteDark = new Palette()
+        {
+            Primary = Colors.Indigo.Lighten1,
+            AppbarText = Colors.Shades.Black
+        },
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidthLeft = "260px",
+            DrawerWidthRight = "300px"
+        },
+        Typography = new Typography()
+        {
+            H1 = new H1()
+            {
+                FontFamily = new[] { "Special Elite", "cursive", "Helvetica", "Arial", "sans-serif" },
+            },
+            H2 = new H2()
+            {
+                FontFamily = new[] { "Special Elite", "cursive", "Helvetica", "Arial", "sans-serif" },
+            },
+            H3 = new H3()
+            {
+                FontFamily = new[] { "Special Elite", "cursive", "Helvetica", "Arial", "sans-serif" },
+            },
+            Subtitle1 = new Subtitle1()
+            {
+                FontFamily = new[] { "Special Elite", "cursive", "Helvetica", "Arial", "sans-serif" },
+            }
+        }
+    };
+}
