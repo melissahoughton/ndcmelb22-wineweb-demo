@@ -39,6 +39,11 @@
 @code {
     private IEnumerable<Product> _products = new List<Product>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        _products = await _http.GetFromJsonAsync<IEnumerable<Product>>("api/products") ?? new List<Product>();
+    }
+    
     private void GoToCheckout()
     {
         _navigationManager.NavigateTo($"checkout");
